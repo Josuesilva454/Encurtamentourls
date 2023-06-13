@@ -2,8 +2,12 @@
 # serve
 iniciando o projeto backend
 # npm install
- npm install mysql
+```sh
+npm install mysql
+```
+```sh 
  npm install cors
+```
  npm install jest
  npm install shortid
  npm install body-parser
