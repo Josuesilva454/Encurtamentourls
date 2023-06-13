@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/register">Register</RouterLink>
         <RouterLink to="/login">Login</RouterLink>
-        <RouterLink to="/shorten">Login</RouterLink>
+        <RouterLink to="/shorten">Encurtando</RouterLink>
 
 
         

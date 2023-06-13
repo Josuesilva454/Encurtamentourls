@@ -11,11 +11,12 @@
       </form>
       
       <h2>Top 100 de URLs mais visitadas</h2>
-      <ul>
-        <li v-for="url in topURLs" :key="url.id">
-          <a :href="url.shortUrl" target="_blank">{{ url.title }}</a> ({{ url.visits }} visitas)
-        </li>
-      </ul>
+  <div v-for="url in topUrls" :key="url.id">
+      <p>{{ url.originalUrl }}</p>
+      <p>Visitas: {{ url.visits }}</p>
+      <p>Título: {{ url.title }}</p>
+    </div>
+  
     </div>
   </template>
   

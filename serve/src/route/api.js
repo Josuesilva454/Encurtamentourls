@@ -32,7 +32,7 @@ app.post('/signup', (req, res) => {
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
-  connection.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], (err, rows) => {
+  bd.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], (err, rows) => {
     if (err) {
       console.error('Erro ao fazer login:', err);
       return res.status(500).json({ error: 'Erro interno do servidor' });
@@ -65,7 +65,7 @@ app.post('/shorten', (req, res) => {
 app.get('/:shortUrl', (req, res) => {
   const { shortUrl } = req.params;
 
-  connection.query('SELECT * FROM urls WHERE shortUrl = ?', [shortUrl], (err, rows) => {
+  bd.query('SELECT * FROM urls WHERE shortUrl = ?', [shortUrl], (err, rows) => {
     if (err) {
       console.error('Erro ao redirecionar URL:', err);
       return res.status(500).json({ error: 'Erro interno do servidor' });
