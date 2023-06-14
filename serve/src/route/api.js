@@ -13,7 +13,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 
-
 /// Rota de cadastro de usuário
 app.post('/signup', (req, res) => {
   const { username, password } = req.body;
@@ -104,22 +103,20 @@ app.delete('/urls/:id', (req, res) => {
 
 // Rota do top 100 de URLs mais visitadas
 app.get('/top100', (req, res) => {
-  bd.query('SELECT shortUrl, visits FROM urls ORDER BY visits DESC LIMIT 100', (err, rows) => {
+  bd.query('SELECT shortUrl, visits, title FROM urls ORDER BY visits', (err, rows) => {
     if (err) {
       console.error('Erro ao obter top 100 de URLs:', err);
       return res.status(500).json({ error: 'Erro interno do servidor' });
     }
-
     const topURLs = rows.map(row => {
       return {
-        shortUrl: url.shortUrl,
-        visits: url.visits,
-        title: url.title
-
+        shortUrl: row.shortUrl,
+        visits: row.visits,
+        title: row.title
       };
     });
 
-    res.json({ topURLs });
+    res.json({ topURLs }); // Envia a resposta JSON com os topURLs
   });
 });
 
@@ -127,3 +124,4 @@ const port = 3000;
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
+module.exports = app;

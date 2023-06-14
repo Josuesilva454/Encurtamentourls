@@ -19,6 +19,7 @@
   
     </div>
   </template>
+
   
   <script>
   import axios from 'axios';
@@ -28,8 +29,9 @@
       return {
         url: '',
         shortUrl: '',
-        topURLs: []
+        topUrls: [] 
       };
+      
     },
     methods: {
       shortenUrl() {
@@ -49,21 +51,23 @@
           .catch(error => {
             console.error('Erro ao encurtar URL:', error);
           });
+          console.log(data)
       },
+      mounted() {
+    this.fetchTopURLs();
+  },
+
       fetchTopURLs() {
         axios.get('http://localhost:3000/top100')
           .then(response => {
             const data = response.data;
-            this.topURLs = data.topURLs;
+            this.topURLs = data.topUrls;
           })
           .catch(error => {
             console.error('Erro ao obter top 100 de URLs:', error);
           });
       }
     },
-    mounted() {
-      this.fetchTopURLs();
-    }
   };
   </script>
   

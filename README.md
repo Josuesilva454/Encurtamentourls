@@ -28,3 +28,17 @@ rodando o test npm run test
 # client
 iniciando projeto front end
 
+```sh
+npm install yarn ou npm install
+```
+
+```sh
+npm install axios
+```
+# Iniciando o docker 
+docker-compose up -d
+
+
+
+
+

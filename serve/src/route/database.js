@@ -13,7 +13,6 @@ db.connect((err) => {
     console.error('Erro ao conectar ao banco de dados:', err);
     return;
   }
-
   // Cria a tabela de usuários
   db.query(`
     CREATE TABLE IF NOT EXISTS users (
