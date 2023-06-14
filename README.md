@@ -20,8 +20,10 @@ npm install mysql
 ```sh 
  npm install express
  ```
+ 
+ rodando servidor 
  ```sh
- rodando servidor node run
+ npm run nodemon
  ```
 rodando o test npm run test
 
