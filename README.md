@@ -21,7 +21,7 @@ npm install mysql
  npm install express
  ```
  
- rodando servidor 
+ rodando o servidor 
  ```sh
  npm run nodemon
  ```
@@ -29,9 +29,19 @@ rodando o test npm run test
 
 # client
 iniciando projeto front end vuejs
- ```sh
-npm install
- ```
+
+install
+```sh
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+```
+criar o projeto 
+```sh
+vue create my-project
+# OR
+vue ui
+```
   ```sh
 npm install axios
  ```
@@ -39,10 +49,6 @@ npm install axios
   ```sh
 npm run dev
  ```
-```sh
-npm install yarn ou npm install
-```
-
 ```sh
 npm install axios
 ```
