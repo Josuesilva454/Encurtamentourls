@@ -65,7 +65,6 @@ Reforçar a segurança do aplicativo implementando medidas de proteção, como a
 Projete o sistema para lidar com um grande número de URLs e usuários. Considere técnicas de escalabilidade, como balanceamento de carga, dimensionamento horizontal e otimização de consultas de banco de dados.
 
 # Apresentação do video 
-https://share.vidyard.com/watch/AQvuVu3pQXoW8uHRt6ZpET?
-
+https://share.vidyard.com/watch/JJb8zizkU5qVwjcJ9mnvLE?
 
 
